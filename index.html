@@ -9,7 +9,8 @@
         <title>Mercury Labs | Websites, Apps, and E-commerce Solutions</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="preload" href="assets/css/main.css" as="style" onload="this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="assets/css/main.css"></noscript>
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     </head>
     <body class="is-preload">
@@ -25,11 +26,11 @@
                             <h1>Welcome to Mercury Labs</h1>
                             <p class="major">Crafting stunning websites, apps, and e-commerce solutions tailored to your needs. Explore our affordable plans and unleash your online potential.</p>
                             <ul class="actions stacked">
-                                <li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
+                                <li><a href="https://wa.me/2349132244444?text=I%27m%20interested%20in%20getting%20started%20with%20Mercury%20Labs" class="button big wide smooth-scroll-middle" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></li>
                             </ul>
                         </div>
                         <div class="image">
-                            <img src="images/banner.jpg" alt="" />
+                            <img src="images/banner.jpg" alt="Mercury Labs banner" loading="lazy" />
                         </div>
                     </section>
 
@@ -39,37 +40,25 @@
                             <h2>Expert Website Development</h2>
                             <p>At Mercury Labs, we specialize in creating visually stunning and highly functional websites. Our team of experts will work closely with you to bring your vision to life online.</p>
                             <ul class="actions stacked">
-                                <li><a href="tel://+2349132244444" class="button">Give us a call</a></li>
+                                <li><a href="https://wa.me/2349132244444?text=Hi%2C%20I%27d%20like%20to%20discuss%20website%20development" class="button" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></li>
                             </ul>
                         </div>
                         <div class="image">
-                            <img src="images/spotlight01.jpg" alt="" />
+                            <img src="images/spotlight01.jpg" alt="Website development showcase" loading="lazy" />
                         </div>
                     </section>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/65d8a1328d261e1b5f647464/1hnb3bc6f';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
+<!-- Tawk loader moved to end of document for non-blocking load -->
                 <!-- About Section -->
                     <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
                         <div class="content">
                             <h2>Customized Solutions for Your Business</h2>
                             <p>Whether you're a small business or a large corporation, we understand that one size does not fit all. That's why we offer customized solutions tailored to your specific needs and goals.</p>
                             <ul class="actions stacked">
-                                <li><a href="#" class="button">Learn More</a></li>
+                                <li><a href="https://wa.me/2349132244444?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20solutions" class="button" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></li>
                             </ul>
                         </div>
                         <div class="image">
-                            <img src="images/spotlight02.jpg" alt="" />
+                            <img src="images/spotlight02.jpg" alt="Custom business solutions" loading="lazy" />
                         </div>
                     </section>
 
@@ -79,11 +68,11 @@
                             <h2>Showcase Your Brand</h2>
                             <p>Your website is often the first impression customers have of your brand. Let us help you make it a memorable one with our portfolio of visually stunning designs and intuitive user experiences.</p>
                             <ul class="actions stacked">
-                                <li><a href="#" class="button">Learn More</a></li>
+                                <li><a href="https://wa.me/2349132244444?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20portfolio" class="button" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></li>
                             </ul>
                         </div>
                         <div class="image">
-                            <img src="images/spotlight03.jpg" alt="" />
+                            <img src="images/spotlight03.jpg" alt="Portfolio examples" loading="lazy" />
                         </div>
                     </section>
 
@@ -112,8 +101,8 @@
                 <section class="wrapper style1 align-center" id="first">
                     <div class="inner medium">
                         <h2>Get started now</h2>
-                        <p>We have professionals who are devoted to making sure you get the best quality websites <br> Call us today 09132244444.</p>
-                        <form method="post" action="https://submit-form.com/GvYGg3C4f">
+                        <p>We have professionals who are devoted to making sure you get the best quality websites <br> Message us on WhatsApp to get started.</p>
+                        <form id="contactForm">
                             <div class="fields">
                                 <div class="field half">
                                     <label for="name">Name</label>
@@ -137,7 +126,6 @@
                                     <input type="date" name="deadline" id="deadline" value="" />
                                 </div>
                             </div>
-                            <input type="hidden" name="_redirect" value="https://mercury-labs.pages.dev/thank-you.html" />
                             <ul class="actions special">
                                 <li><input type="submit" name="submit" id="submit" value="Send Request to developers" /></li>
                             </ul>
@@ -286,68 +274,19 @@
 }
 </style>
 <script>
-    // Get the modal
-  // Get the modal
 var modal = document.getElementById("myModal");
+if (modal) {
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+    if (btn) btn.onclick = function() { modal.style.display = "block"; };
+    if (span) span.onclick = function() { modal.style.display = "none"; };
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-//  // 5000 milliseconds = 5 seconds
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) modal.style.display = "none";
+    });
 }
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-} 
-
-    </script>
-                <div class="modal id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-modal="true" >
-                  
-                    <form method="post" action="https://submit-form.com/GvYGg3C4f">
-                        <div class="fields">
-                            <div class="field half">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name" value="" />
-                            </div>
-                            <div class="field half">
-                                <label for="email">Email / Phone Number</label>
-                                <input type="email" name="email" id="email" value="" />
-                            </div>
-                            <div class="field">
-                                <label for="message">What type of website would you like created for you?</label>
-                                <textarea name="message" id="message" rows="6"></textarea>
-                            </div>
-                            <div class="field half">
-                                <label for="budget">Budget (Optional) </label>
-                                <input type="range" name="budget" id="budget" min="10000" max="1000000" value="50000" step="100" onchange="updateBudgetDisplay(this.value)" class="range-slider">
-                                <span id="budgetDisplay">50000</span>
-                            </div>
-                            <div class="field half">
-                                <label for="deadline">Deadline (Optional) </label>
-                                <input type="date" name="deadline" id="deadline" value="" />
-                            </div>
-                        </div>
-                        <input type="hidden" name="_redirect" value="https://mercury-labs.pages.dev/thank-you.html" />
-                        <ul class="actions special">
-                            <li><input type="submit" name="submit" id="submit" value="Send Request to developers" /></li>
-                        </ul>
-                    </form>
-                  </div>  
+</script>
                       
                 <!-- Footer Section -->
                     <footer class="wrapper style1 align-center">
@@ -366,13 +305,54 @@ window.onclick = function(event) {
             </div>
         
         <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.scrollex.min.js"></script>
-            <script src="assets/js/jquery.scrolly.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
+            <script src="assets/js/jquery.min.js" defer></script>
+            <script src="assets/js/jquery.scrollex.min.js" defer></script>
+            <script src="assets/js/jquery.scrolly.min.js" defer></script>
+            <script src="assets/js/browser.min.js" defer></script>
+            <script src="assets/js/breakpoints.min.js" defer></script>
+            <script src="assets/js/util.js" defer></script>
+            <script src="assets/js/main.js" defer></script>
+
+            <!-- Contact form handler: open WhatsApp with prefilled message -->
+            <script defer>
+            document.addEventListener('DOMContentLoaded', function(){
+                var form = document.getElementById('contactForm');
+                if (!form) return;
+
+                form.addEventListener('submit', function(e){
+                    e.preventDefault();
+                    var name = document.getElementById('name') ? document.getElementById('name').value.trim() : '';
+                    var contact = document.getElementById('email') ? document.getElementById('email').value.trim() : '';
+                    var message = document.getElementById('message') ? document.getElementById('message').value.trim() : '';
+                    var budget = document.getElementById('budget') ? document.getElementById('budget').value : '';
+                    var deadline = document.getElementById('deadline') ? document.getElementById('deadline').value : '';
+
+                    var parts = [];
+                    if(name) parts.push('Name: ' + name);
+                    if(contact) parts.push('Contact: ' + contact);
+                    if(message) parts.push('Message: ' + message);
+                    if(budget) parts.push('Budget: ' + budget);
+                    if(deadline) parts.push('Deadline: ' + deadline);
+
+                    var text = parts.join('\n');
+                    var waUrl = 'https://wa.me/2349132244444?text=' + encodeURIComponent(text || 'Hello%2C%20I%27d%20like%20to%20get%20started');
+                    window.open(waUrl, '_blank', 'noopener');
+                });
+            });
+            </script>
+
+            <!-- Tawk.to widget: loaded last to avoid blocking render -->
+            <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/65d8a1328d261e1b5f647464/1hnb3bc6f';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+            </script>
 
     </body>
 </html>
